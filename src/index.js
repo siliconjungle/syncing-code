@@ -20,21 +20,25 @@ const code = `=MULT(DIVIDE(5, 10), 100)`
 
 console.log('_CODE_', code)
 
-const inputStream = new InputStream(code)
-const tokenizer = new Tokenizer(inputStream)
+try {
+  const inputStream = new InputStream(code)
+  const tokenizer = new Tokenizer(inputStream)
 
-const tokens = tokenizer.read()
+  const tokens = tokenizer.read()
 
-console.log('_TOKEN_', tokens)
+  console.log('_TOKEN_', tokens)
 
-const parser = new Parser(tokens)
+  const parser = new Parser(tokens)
 
-const ast = parser.parse()
+  const ast = parser.parse()
 
-console.log('_AST_', JSON.stringify(ast, null, 2))
+  console.log('_AST_', JSON.stringify(ast, null, 2))
 
-interpret(ast).then(result => {
-  console.log('_RESULT_', result)
-}).catch(e => {
+  interpret(ast).then(result => {
+    console.log('_RESULT_', result)
+  }).catch(e => {
+    console.log('_ERROR_', e)
+  })
+} catch (e) {
   console.log('_ERROR_', e)
-})
+}
