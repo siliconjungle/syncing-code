@@ -1,28 +1,28 @@
 // AST
-export const ast = {
-  type: 'call',
-  func: { type: 'func', value: 'SUM' },
-  args: [
-    {
-      type: 'call',
-      func: { type: 'func', value: 'RESOURCE' },
-      args: [
-        {
-          type: 'string',
-          value: 'https://www.offlinefirst.com',
-        },
-        {
-          type: 'string',
-          value: 'apples',
-        },
-      ],
-    },
-    {
-      type: 'num',
-      value: 10,
-    },
-  ],
-}
+// export const ast = {
+//   type: 'call',
+//   func: { type: 'func', value: 'SUM' },
+//   args: [
+//     {
+//       type: 'call',
+//       func: { type: 'func', value: 'RESOURCE' },
+//       args: [
+//         {
+//           type: 'string',
+//           value: 'https://www.offlinefirst.com',
+//         },
+//         {
+//           type: 'string',
+//           value: 'apples',
+//         },
+//       ],
+//     },
+//     {
+//       type: 'num',
+//       value: 10,
+//     },
+//   ],
+// }
 
 class Parser {
   constructor(tokens) {
