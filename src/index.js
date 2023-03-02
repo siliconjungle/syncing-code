@@ -15,8 +15,8 @@ import { interpret } from './interpreter'
 // const code = `=ABS(-5)`
 // const code = `=NOW()`
 // const code = `Hello there!`
-// const code = `=MULT(DIVIDE(5, 10), 100)`
-const code = `=lemon`
+const code = `=MULT(DIVIDE(5, 10), 100)`
+// const code = `=lemon`
 
 console.log('_CODE_', code)
 
